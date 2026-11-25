@@ -1,0 +1,745 @@
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f5eadc;
+    color: #594331;
+}
+
+/* WELCOME PAGE */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background:
+        linear-gradient(
+            rgba(30, 20, 15, 0.42),
+            rgba(30, 20, 15, 0.58)
+        ),
+        url("images/background.jpeg");
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.content {
+    max-width: 750px;
+    color: #fff8ed;
+    padding: 35px;
+}
+
+.small-heading {
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #b58b66;
+}
+
+.hero .small-heading {
+    color: #f1d6b5;
+}
+
+h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #e9bd8d;
+    font-style: italic;
+}
+
+.message {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.love {
+    font-size: 17px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* BUTTONS */
+button {
+    background: #d2a679;
+    color: #38271b;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f1d6b5;
+    transform: scale(1.05);
+}
+
+/* HIDE SECTIONS */
+.hidden {
+    display: none !important;
+}
+
+/* GIFT SECTION */
+.gift-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background: #f5eadc;
+}
+
+.gift-box {
+    font-size: 110px;
+    margin: 20px;
+    animation: bounce 1.2s infinite;
+}
+
+.gift-section h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.gift-message {
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+/* MEMORIES GALLERY */
+.memories-section {
+    padding: 75px 7%;
+    background: #f5eadc;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.gallery-heading h2 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 15px;
+    color: #77543b;
+}
+
+.gallery-heading > p:last-child {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.photo-card {
+    background: #fffaf3;
+    padding: 12px 12px 22px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(75, 48, 27, 0.12);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    background: #f5eadc;
+    border-radius: 5px;
+    display: block;
+}
+
+.photo-card p {
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* FINAL BIRTHDAY MESSAGE */
+.final-message {
+    text-align: center;
+    margin: 75px auto 20px;
+    max-width: 650px;
+    line-height: 2;
+}
+
+.final-message h2 {
+    font-size: 35px;
+    color: #805a3d;
+    margin-bottom: 15px;
+}
+
+.final-message p {
+    font-size: 18px;
+}
+
+.final-message h3 {
+    color: #a7784d;
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+/* BIRTHDAY LETTER */
+.letter-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: #eee0ce;
+}
+
+.letter-container {
+    width: 100%;
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+/* RIBBON ENVELOPE */
+.closed-letter {
+    width: 260px;
+    margin: 30px auto;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.closed-letter:hover {
+    transform: translateY(-8px);
+}
+
+.envelope-body {
+    height: 175px;
+    position: relative;
+    background: #f1d9bd;
+    border: 2px solid #d5ae86;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ribbon-vertical {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #a83242;
+    box-shadow: inset 5px 0 rgba(255, 255, 255, 0.15);
+}
+
+.ribbon-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #a83242;
+}
+
+.ribbon-bow {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.bow-loop {
+    width: 38px;
+    height: 27px;
+    border: 7px solid #a83242;
+    background: #d85b68;
+    border-radius: 50% 50% 10% 50%;
+}
+
+.bow-loop.left {
+    transform: rotate(25deg);
+}
+
+.bow-loop.right {
+    transform: scaleX(-1) rotate(25deg);
+}
+
+.bow-knot {
+    width: 17px;
+    height: 17px;
+    background: #842332;
+    border-radius: 50%;
+    margin: 0 -3px;
+    z-index: 4;
+}
+
+.envelope-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 28px;
+}
+
+.closed-letter p {
+    color: #594331;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
+.closed-letter span {
+    color: #a83242;
+    font-size: 14px;
+}
+
+/* OPEN LETTER */
+.open-letter {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #fffaf0, #f5e6d3);
+    color: #594331;
+    border: 2px solid #e4c9a8;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    line-height: 1.8;
+    transform-origin: top center;
+    position: relative;
+    overflow: hidden;
+    animation: paperUnfold 1.2s ease both;
+}
+
+@keyframes paperUnfold {
+    0% {
+        opacity: 0;
+        transform: perspective(800px) rotateX(-75deg) scaleY(0.3);
+    }
+    60% {
+        opacity: 1;
+        transform: perspective(800px) rotateX(10deg) scaleY(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(800px) rotateX(0deg) scaleY(1);
+    }
+}
+
+.open-letter h2,
+.open-letter h3 {
+    color: #a83242;
+    text-align: center;
+}
+
+.open-letter p {
+    color: #594331;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.open-letter .signature {
+    text-align: right;
+    font-style: italic;
+    color: #a83242;
+    margin-top: 25px;
+}
+
+.open-letter button {
+    margin-top: 20px;
+}
+
+/* RIBBON OPENING ANIMATION */
+.ribbon-opening .ribbon-vertical,
+.ribbon-opening .ribbon-horizontal {
+    animation: ribbonMove 0.8s ease forwards;
+}
+
+.ribbon-opening .ribbon-bow {
+    animation: bowFly 0.8s ease forwards;
+}
+
+@keyframes ribbonMove {
+    to {
+        opacity: 0;
+        transform: translateY(60px) rotate(25deg);
+    }
+}
+
+@keyframes bowFly {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -100px) rotate(180deg);
+    }
+}
+
+/* FALLING ROSE PETALS */
+.petal {
+    position: fixed;
+    top: -50px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: petalFall linear forwards;
+    user-select: none;
+}
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* FLOATING HEARTS */
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: heartFloat 5s linear forwards;
+}
+
+@keyframes heartFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FINAL BIRTHDAY SURPRISE */
+.final-surprise-trigger {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f5eadc;
+}
+
+.final-surprise-trigger h2 {
+    color: #a83242;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.final-surprise-trigger p {
+    color: #594331;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.final-surprise-trigger button,
+.final-surprise button {
+    background: #a83242;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.final-surprise-trigger button:hover,
+.final-surprise button:hover {
+    background: #842332;
+    transform: scale(1.05);
+}
+
+/* CAKE SECTION */
+.final-surprise {
+    min-height: 100vh;
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(#fff7ed, #f5e5d2);
+}
+
+.final-surprise h1 {
+    color: #a83242;
+    font-family: Georgia, serif;
+}
+
+.cake-subtitle {
+    color: #594331;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.cake-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 60px auto 20px;
+}
+
+.cake-bottom {
+    position: absolute;
+    width: 260px;
+    height: 85px;
+    bottom: 35px;
+    left: 20px;
+    background: #a85f68;
+    border-radius: 12px 12px 25px 25px;
+    box-shadow: inset 0 -12px rgba(0, 0, 0, 0.08);
+}
+
+.cake-middle {
+    position: absolute;
+    width: 220px;
+    height: 65px;
+    bottom: 120px;
+    left: 40px;
+    background: #e7b88d;
+    border-radius: 12px 12px 18px 18px;
+}
+
+.cake-top {
+    position: absolute;
+    width: 180px;
+    height: 45px;
+    bottom: 185px;
+    left: 60px;
+    background: #fff0d9;
+    border-radius: 50% 50% 12px 12px;
+    z-index: 2;
+}
+
+.cake-plate {
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    bottom: 17px;
+    left: 5px;
+    background: #d6b18c;
+    border-radius: 50%;
+}
+
+/* CANDLES */
+.candles {
+    position: absolute;
+    bottom: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 17px;
+    z-index: 3;
+}
+
+.candle {
+    position: relative;
+    width: 12px;
+    height: 55px;
+}
+
+.candle-stick {
+    width: 12px;
+    height: 55px;
+    background: repeating-linear-gradient(
+        45deg,
+        #a83242,
+        #a83242 5px,
+        #fff0d9 5px,
+        #fff0d9 10px
+    );
+    border-radius: 4px;
+}
+
+/* CANDLE FLAMES */
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    top: -23px;
+    left: -1px;
+    background: #ffb52e;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 15px #ff9d00;
+    animation: candleGlow 0.7s infinite alternate;
+}
+
+@keyframes candleGlow {
+    from {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    to {
+        transform: rotate(-45deg) scale(1.1);
+    }
+}
+
+/* FINAL BIRTHDAY MESSAGE */
+#birthdayMessage {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background: #fffaf3;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    color: #594331;
+    line-height: 1.9;
+    animation: messageAppear 1.2s ease;
+}
+
+#birthdayMessage h2 {
+    color: #a83242;
+    font-size: 27px;
+}
+
+#birthdayMessage p {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.final-signature {
+    font-style: italic;
+    color: #a83242;
+    font-weight: bold;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET DESIGN */
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .photo-card img {
+        height: 220px;
+    }
+
+    .memories-section {
+        padding: 50px 5%;
+    }
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 450px) {
+    .hero {
+        background-position: center 20%;
+        padding: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 280px;
+    }
+
+    .gift-section h2 {
+        font-size: 30px;
+    }
+
+    .letter-section {
+        padding: 35px 15px;
+    }
+
+    .open-letter {
+        padding: 22px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 30px;
+    }
+
+    .final-surprise-trigger h2 {
+        font-size: 25px;
+    }
+
+    .final-surprise {
+        padding: 45px 12px;
+    }
+
+    .final-surprise h1 {
+        font-size: 36px;
+    }
+
+    .cake-container {
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin-bottom: -20px;
+    }
+
+    #birthdayMessage {
+        padding: 22px 15px;
+    }
+}
+
+/* REAL FIREWORKS CANVAS */
+
+#fireworksCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+}

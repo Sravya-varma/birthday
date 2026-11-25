@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nanna ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="fireworksCanvas"></canvas>
+
+<!-- Birthday Music -->
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday.mp4" type="audio/mp4">
+</audio>
+
+<!-- Welcome Section -->
+<section class="hero" id="home">
+    <div class="content">
+
+        <p class="small-heading">A SPECIAL SURPRISE FOR YOU</p>
+
+        <h1>
+            Happy Birthday,<br>
+            <span>Nanna!</span> ❤️
+        </h1>
+
+        <p class="message">
+            To the man who has always been my
+            biggest strength, my first hero
+            and my forever inspiration.
+        </p>
+
+        <p class="love">Made with endless love ❤️</p>
+
+        <button onclick="openSurprise()">
+            Open Your Surprise 🎁
+        </button>
+
+    </div>
+</section>
+
+
+<!-- Gift Section -->
+<section class="gift-section hidden" id="giftSection">
+
+    <p class="small-heading">A LITTLE GIFT FROM MY HEART</p>
+
+    <div class="gift-box" id="giftBox">🎁</div>
+
+    <h2>For You, Nanna ❤️</h2>
+
+    <p class="gift-message">
+        Every moment with you is a beautiful memory.
+        Here's a little collection of our special moments.
+    </p>
+
+    <button onclick="showMemories()">
+        Reveal Our Memories 📸
+    </button>
+
+</section>
+
+
+<!-- Memories Gallery -->
+<section class="memories-section hidden" id="memories">
+
+    <div class="gallery-heading">
+
+        <p class="small-heading">A COLLECTION OF LOVE</p>
+
+        <h2>Our Beautiful Memories ❤️</h2>
+
+        <p>Every picture tells a story.</p>
+
+    </div>
+
+
+    <!-- Family Photos -->
+    <div class="gallery">
+
+        <div class="photo-card">
+            <img src="images/nanna4.jpeg" alt="Family Memory 1">
+            <p>A memory to cherish ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/8.jpeg" alt="Family Memory 2">
+            <p>My forever hero ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/12.jpeg" alt="Family Memory 3">
+            <p>Beautiful moments</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/13.jpeg" alt="Family Memory 4">
+            <p>Memories forever ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/14.jpeg" alt="Family Memory 5">
+            <p>My biggest strength</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/15.jpeg" alt="Family Memory 6">
+            <p>Always special</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/16.jpeg" alt="Family Memory 7">
+            <p>Moments of happiness</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/17.jpeg" alt="Family Memory 8">
+            <p>Forever grateful</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/nanna2.jpeg" alt="Family Memory 9">
+            <p>Love you, Nanna ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/nanna1.jpeg" alt="Family Memory 10">
+            <p>My favourite person ❤️</p>
+        </div>
+
+    </div>
+
+
+    <!-- Final Birthday Message -->
+    <div class="final-message">
+
+        <h2>Thank You, Nanna! ❤️</h2>
+
+        <p>
+            No words can describe how lucky I am
+            to have you in my life.
+            I love you forever!
+        </p>
+
+        <h3>Happy Birthday! 🎂</h3>
+
+    </div>
+
+
+    <!-- Birthday Letter -->
+    <section class="letter-section">
+
+        <p class="small-heading">A LETTER FROM MY HEART</p>
+
+        <h2>A Special Letter for Nanna ❤️</h2>
+
+        <p>Tap the envelope to read my letter 💌</p>
+
+        <div class="letter-container">
+
+            <!-- Closed Ribbon Envelope -->
+            <div id="closedLetter"
+                 class="closed-letter"
+                 onclick="openBirthdayLetter()">
+
+                <div class="envelope-body">
+
+                    <div class="ribbon-vertical"></div>
+                    <div class="ribbon-horizontal"></div>
+
+                    <div class="ribbon-bow">
+                        <span class="bow-loop left"></span>
+                        <span class="bow-knot"></span>
+                        <span class="bow-loop right"></span>
+                    </div>
+
+                    <div class="envelope-heart">❤️</div>
+
+                </div>
+
+                <p>With Love, Nanna ❤️</p>
+
+                <span>🎀 Tap to Open 🎀</span>
+
+            </div>
+
+
+            <!-- Open Letter -->
+            <div id="openLetter" class="open-letter hidden">
+
+                <h2>Dear Nanna, ❤️</h2>
+
+                <p>
+                    Words can never explain how much you mean to me.
+                    You are my biggest strength, my first hero,
+                    and the person who inspires me every day.
+                </p>
+
+                <p>
+                    Thank you for every sacrifice, every smile,
+                    every lesson and every moment you have given me.
+                    I may not say it every day, but I am so grateful
+                    to have you as my father.
+                </p>
+
+                <p>
+                    I wish you endless happiness, good health,
+                    peace and success. May all your dreams come true.
+                </p>
+
+                <p>
+                    No matter how old I grow, I will always be
+                    your little girl.
+                </p>
+
+                <h3>Love you forever, Nanna! ❤️</h3>
+
+                <p class="signature">
+                    With lots of love,<br>
+                    Your Daughter ❤️
+                </p>
+
+                <button onclick="closeBirthdayLetter(event)">
+                    Close Letter 💌
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- FINAL BIRTHDAY SURPRISE 🎂 -->
+    <!-- ================================= -->
+
+    <div class="final-surprise-trigger">
+
+        <h2>Wait... One Last Surprise! ❤️</h2>
+
+        <p>I have something special for you, Nanna.</p>
+
+        <button onclick="showFinalSurprise()">
+            One Last Surprise 🎁
+        </button>
+
+    </div>
+
+
+    <!-- Birthday Cake Section -->
+    <section id="finalSurprise" class="final-surprise hidden">
+
+        <p class="small-heading">A SPECIAL DAY FOR MY HERO</p>
+
+        <h1>Happy Birthday, Nanna! ❤️</h1>
+
+        <p class="cake-subtitle">
+            This little cake comes with lots of love!
+        </p>
+
+
+        <!-- Birthday Cake -->
+        <div class="cake-container">
+
+            <!-- Candles -->
+            <div class="candles">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+            </div>
+
+            <!-- Cake Layers -->
+            <div class="cake-top"></div>
+
+            <div class="cake-middle"></div>
+
+            <div class="cake-bottom"></div>
+
+            <div class="cake-plate"></div>
+
+        </div>
+
+
+        <!-- Make a Wish Button -->
+        <button id="wishButton" onclick="blowCandles()">
+            Make a Wish! ✨
+        </button>
+
+
+        <!-- Final Birthday Message -->
+        <div id="birthdayMessage" class="hidden">
+
+            <h2>Happy Birthday, My Dearest Nanna! ❤️</h2>
+
+            <p>
+                You are my first hero, my biggest strength,
+                and my forever inspiration.
+            </p>
+
+            <p>
+                I wish you endless happiness, good health,
+                peace and success. May every dream of yours
+                come true.
+            </p>
+
+            <h2>Love You So Much, Nanna! ❤️</h2>
+
+            <p class="final-signature">
+                Forever your little girl! 💗
+            </p>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
